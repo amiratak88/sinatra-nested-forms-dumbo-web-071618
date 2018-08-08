@@ -1,7 +1,30 @@
-<h1>Display your Pirate here</h1>
+<h1>Your pirate was successfully created.</h1>
 
 
-<h2>Display your first ship here</h2>
+<h2>Pirate</h2>
 
+<h3>Name:</h3>
+<p><%= @pirate.name %></p>
 
-<h2>Display your second ship here</h2>
+<h3>Height:</h3>
+<p><%= @pirate.height %></p>
+
+<h3>Weight:</h3>
+<p><%= @pirate.weight %></p>
+
+<h2>Ships:</h2>
+
+<% @ships.each_with_index do |ship, i| %>
+
+<h4>Ship <%= i + 1 %></h4>
+
+<h4>Name:</h4>
+<p><%= ship.name %></p>
+
+<h4>Type:</h4>
+<p><%= ship.type %></p>
+
+<h4>Booty:</h4>
+<p><%= ship.booty %></p>
+
+<% end %>
